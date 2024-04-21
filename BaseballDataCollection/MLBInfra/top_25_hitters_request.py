@@ -35,7 +35,7 @@ pymysql_connection = pymysql.connect(
 '''
 # Definitions------------------------------------------------------------------
 url = "https://bdfed.stitch.mlbinfra.com/bdfed/stats/player"
-querystring = {"stitch_env":"prod","season":"2022","sportId":"1", \
+querystring = {"stitch_env":"prod","season":"2024","sportId":"1", \
                 "stats":"season","group":"hitting","gameType":"R", \
                 "limit":"25","offset":"0","sortStat":"onBasePlusSlugging", \
                 "order":"desc","daysBack":"-365"
