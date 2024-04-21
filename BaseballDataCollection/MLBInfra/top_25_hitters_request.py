@@ -48,7 +48,7 @@ data = response.json()
 stats = data['stats']
 df = pandas.json_normalize(stats)
 time_executed = f'{datestrings.todays_date}_{datestrings.right_now_24}'
-file_name = f'top25_hitters_week_to_date_{time_executed}.csv'
+file_name = f'top25_hitters_week_to_date_{time_executed.replace(':','')}.csv'
 try:
     df.to_csv(data_path+file_name, index=False)
     logger.log.debug(f'{file_name} saved to data folder')
