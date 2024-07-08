@@ -1,3 +1,4 @@
 _logs/
 .venv/
 __data/
+__pycache__/
