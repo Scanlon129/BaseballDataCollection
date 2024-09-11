@@ -37,4 +37,4 @@ except:
 # Main-------------------------------------------------------------------------
 if __name__ == '__main__':
     df = request_top_hitters()
-    save_to_excel(df)
+    save_to_csv(df)
