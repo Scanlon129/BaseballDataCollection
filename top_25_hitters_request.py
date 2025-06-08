@@ -26,6 +26,7 @@ import pandas
 from datetime import datetime
 # Local Dependencies-----------------------------------------------------------
 from skunkpack import logger
+from skunkpack import datestrings
 
 # Main-------------------------------------------------------------------------
 def request_top_hitters(top_n=25, daysBack=-365, season=datetime.now().year):
@@ -45,4 +46,4 @@ def request_top_hitters(top_n=25, daysBack=-365, season=datetime.now().year):
 
 if __name__ == '__main__':
     df = request_top_hitters()
-    print(df)
+    df.to_csv(f'__data\\Top_25_Hitters\\top_25_hitters_as_of_{datestrings.todays_date}.csv', index=False)
